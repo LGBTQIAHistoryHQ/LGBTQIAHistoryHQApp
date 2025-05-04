@@ -4,6 +4,20 @@
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#563C5C",
+    "start_url": ".",
+    "description": "An app to teach LGBTQ+ history",
+    "screenshots": [
+        {
+            "src": "images/screenshots/desktop.png",
+            "sizes": "1280x720",
+            "form_factor": "wide"
+        },
+        {
+            "src": "images/screenshots/phone.png",
+            "sizes": "480x728",
+            "form_factor": "narrow"
+        }
+    ],
     "icons": [
         {
         "src": "images/icons/icon-48x48.png",
