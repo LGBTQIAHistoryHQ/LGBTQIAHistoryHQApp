@@ -42,10 +42,15 @@ p {
 }
 
 .homepageLesson .arrow a { 
-    font-size: 24px; /* Adjust size as needed */ 
+    font-size: 2rem; /* Adjust size as needed */ 
+    font-weight: bold;
     text-decoration: none; /* Remove underline */ 
-    color: #000; /* Change color to your preference */ 
+    color: #563C5C; /* Change color to your preference */ 
     transition: color 0.3s ease; /* Smooth color transition */ 
+}
+
+.homepageLesson .arrow a:hover { 
+    color: #E0BA44;
 }
 
 .homepageLesson .arrow a {
