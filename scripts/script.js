@@ -12,7 +12,9 @@ async function registerSW() {
             await navigator.serviceWorker.register('../sw.js');
             console.log("Yayyyy! SW registarted");
         } catch (e) {
-            console.log("SW registration failed");
+            console.error("Error Name:", e.name); // Returns the name of the error (e.g., "Error", "TypeError")
+            console.error("Error Message:", e.message); // Returns the error message
+            console.error("Error Stack:", e.stack); // Returns the stack trace, if available
         }
       }
 }
