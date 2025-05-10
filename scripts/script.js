@@ -6,32 +6,23 @@ window.addEventListener('load', () => {
     }
 )
 
-const registerServiceWorker = async () => {
+async function registerSW() {
     if ('serviceWorker' in navigator) {
-      try {
-        const registration = await navigator.serviceWorker.register(
-          './../sw.js',
-          {
-            scope: './../',
-          }
-        );
-        if (registration.installing) {
-          console.log('Service worker installing');
-        } else if (registration.waiting) {
-          console.log('Service worker installed');
-        } else if (registration.active) {
-          console.log('Service worker active');
+        try {
+            await navigator.serviceWorker.register('../sw.js');
+            console.log("Yayyyy! SW registarted");
+        } catch (e) {
+            console.error("Error Name:", e.name); // Returns the name of the error (e.g., "Error", "TypeError")
+            console.error("Error Message:", e.message); // Returns the error message
+            console.error("Error Stack:", e.stack); // Returns the stack trace, if available
         }
-      } catch (error) {
-        console.error(`Registration failed with ${error}`);
       }
-    }
-  };
+}
+
 /* Checking if lessons have been begun */
 var AIDSActivism = document.getElementById("AIDSActivism");
 var progressTracker = document.getElementById("PT3");
 var lessonsBegun = [];
-reset();
 
 AIDSActivism.onclick = function(){
     /* Updating lessonsBegun */
